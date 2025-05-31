@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 320: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    '''
-    ^
-        Здание университета казалось еще полупустым: я не удивлена, ведь мало кто из студентов спешил приходить к первой паре. 
-        '''
+File "game/route_reagents.rpy", line 211: expected 'image_name_component' not found.
+    hide 
+         ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Wed May 28 22:57:01 2025
+Sat May 31 16:45:37 2025
