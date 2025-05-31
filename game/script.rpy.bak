@@ -89,7 +89,7 @@ label start:
 
     li "Блин.{w} Куда-то делись защитные очки.{w} Вчера вечером я пыталась почистить их."
     
-    call explore_room from _call_explore_room
+    call explore_room
 
     stop audio
 
@@ -551,12 +551,12 @@ label choose_chemicals:
 
         "Добавить карбонат натрия" if not added_sodium_carbonate:
             $ added_sodium_carbonate = True
-            call add_sodium_carbonate from _call_add_sodium_carbonate
+            call add_sodium_carbonate
             jump choose_chemicals
 
         "Добавить гидроксид натрия" if not added_sodium_hydroxide:
             $ added_sodium_hydroxide = True
-            call add_sodium_hydroxide from _call_add_sodium_hydroxide
+            call add_sodium_hydroxide
             jump choose_chemicals
 
         "Продолжить" if added_sodium_carbonate and added_sodium_hydroxide:
