@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/route_reagents.rpy", line 211: expected 'image_name_component' not found.
-    hide 
-         ^
+File "game/credits.rpy", line 1: transform statement expects a non-empty block.
+    transform scroll_up:
+                        ^
+
+File "game/credits.rpy", line 2: expected statement.
+    yalign 1.2
+            ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Sat May 31 16:45:37 2025
+Sun Jun 15 22:22:31 2025

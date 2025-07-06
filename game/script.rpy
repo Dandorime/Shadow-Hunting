@@ -60,7 +60,7 @@ init:
     $ right2 = Position(xalign=0.7)
 
 label start:
-    call screen shadow_chapter("Глава 1", "Утро Лины")
+    call screen shadow_chapter("Глава 1", "Силуэт")
     stop music
 
     play sound "audio/sound/alarm-clock.mp3"
@@ -568,6 +568,8 @@ label choose_chemicals:
 
 label add_sodium_carbonate:
 
+    play sound "audio/sound/add_soium.mp3"
+
     '''
     Я взяла пипетку, аккуратно капнула 5 мл раствора натрия углекислого в первую пробирку.
     
@@ -583,6 +585,8 @@ label add_sodium_carbonate:
     return
 
 label add_sodium_hydroxide:
+
+    play sound "audio/sound/add_soium.mp3"
 
     '''
     Я взяла пипетку, аккуратно капнула 5 мл раствора гидроксида натрия в первую пробирку.
@@ -677,11 +681,20 @@ label continue_story:
     Я занималась этим так часто, что пальцы двигались автоматически, будто знали, в каком порядке прикасаться к стеклу.
     
     Всё было тихо. Я почти забыла о голосах и уже мысленно представляла, как поднимусь наверх, надену куртку, открою дверь и вдохну свежий весенний воздух…
+    '''
+
+    play sound "audio/sound/male_scream.mp3"
+
+    '''
     
     И вдруг — крик.
     
     Пронзительный, почти нечеловеческий.
+    '''
     
+    play sound "audio/sound/drop.mp3"
+
+    '''
     Через мгновение — удар. Глухой, тяжёлый, будто что-то упало на пол.
     
     Я застыла. 
@@ -788,6 +801,8 @@ label examine_john_body:
     Я стояла в углу, трясущимися руками обнимая себя за плечи и внимательно смотря на упавшую колбу.
     '''
 
+    jump ending
+
     return
 
 label run_after_the_shadow:
@@ -818,4 +833,10 @@ label run_after_the_shadow:
     Тень исчезла, оставив за собой резкий порыв сквозняка.
     '''
 
+    jump ending
+
+    return
+
+label ending:
+    call show_credits from _call_show_credits
     return
